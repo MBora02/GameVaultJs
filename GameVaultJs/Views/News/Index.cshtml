@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "News";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddNews">
+    Add News
+</button>
+
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+            <th>Id</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Publish Date</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody class="text-center" id="table_data">
+    </tbody>
+</table>
+
+<div class="modal fade" id="NewsMadal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title text-primary" id="NewsHeading">
+                    Add News
+                </h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group" id="newsId">
+                    <label>Id</label>
+                    <input type="text"
+                           class="form-control"
+                           id="NewsId"
+                           disabled="disabled" />
+                </div>
+
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Title" />
+                </div>
+
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea class="form-control"
+                              id="Content"
+                              rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Publish Date</label>
+                    <input type="date"
+                           class="form-control"
+                           id="PublishDate" />
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-success"
+                        onclick="AddNews();"
+                        id="AddNews">
+                    Save
+                </button>
+
+                <button class="btn btn-warning"
+                        onclick="UpdateNews();"
+                        id="btnUpdate"
+                        style="display:none">
+                    Update
+                </button>
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<input type="hidden"
+       id="urlNewsData"
+       value="@Url.Action("NewsList", "News")" />
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/news.js"></script>

@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Games";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddGame">
+    Add Game
+</button>
+
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Developer</th>
+            <th>Platform</th>
+            <th>Release Date</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody class="text-center" id="table_data">
+    </tbody>
+</table>
+
+<div class="modal fade" id="GameMadal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title text-primary" id="GameHeading">
+                    Add Game
+                </h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group" id="gameId">
+                    <label>Id</label>
+                    <input type="text"
+                           class="form-control"
+                           id="GameId"
+                           disabled="disabled" />
+                </div>
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Name" />
+                </div>
+
+                <div class="form-group">
+                    <label>Developer</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Developer" />
+                </div>
+
+                <div class="form-group">
+                    <label>Platform</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Platform" />
+                </div>
+
+                <div class="form-group">
+                    <label>Release Date</label>
+                    <input type="date"
+                           class="form-control"
+                           id="ReleaseDate" />
+                </div>
+
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="number"
+                           class="form-control"
+                           id="Price" />
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control"
+                              id="Description">
+                    </textarea>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-success"
+                        onclick="AddGame();"
+                        id="AddGame">
+                    Save
+                </button>
+
+                <button class="btn btn-warning"
+                        onclick="UpdateGame();"
+                        id="btnUpdate"
+                        style="display:none">
+                    Update
+                </button>
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<input type="hidden"
+       id="urlGameData"
+       value="@Url.Action("GameList", "Game")" />
+@section Scripts
+{
+    <script src="~/js/game.js"></script>
+}

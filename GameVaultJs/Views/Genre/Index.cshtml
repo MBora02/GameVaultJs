@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Genres";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddGenre">
+    Add Genre
+</button>
+
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Game Count</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody class="text-center" id="table_data">
+    </tbody>
+</table>
+
+<div class="modal fade" id="GenreMadal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title text-primary" id="GenreHeading">
+                    Add Genre
+                </h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group" id="genreId">
+                    <label>Id</label>
+                    <input type="text"
+                           class="form-control"
+                           id="GenreId"
+                           disabled="disabled" />
+                </div>
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text"
+                           class="form-control"
+                           id="Name" />
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control"
+                              id="Description">
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Game Count</label>
+                    <input type="number"
+                           class="form-control"
+                           id="GameCount" />
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-success"
+                        onclick="AddGenre();"
+                        id="AddGenre">
+                    Save
+                </button>
+
+                <button class="btn btn-warning"
+                        onclick="UpdateGenre();"
+                        id="btnUpdate"
+                        style="display:none">
+                    Update
+                </button>
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<input type="hidden"
+       id="urlGenreData"
+       value="@Url.Action("GenreList", "Genre")" />
+@section Scripts
+{
+    <script src="~/js/genre.js"></script>
+}
