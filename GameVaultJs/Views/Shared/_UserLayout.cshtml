@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -57,7 +57,7 @@
                 🎮 GameVault
             </a>
 
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav ms-auto align-items-center">
 
                 <a class="nav-link"
                    asp-controller="News"
@@ -65,9 +65,16 @@
                     News
                 </a>
 
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <span class="nav-item text-white-50 small me-3" style="font-size: 0.9rem;">
+                         Welcome, @User.Identity.Name
+                    </span>
+                }
+
                 <a class="nav-link"
                    asp-controller="Login"
-                   asp-action="Index">
+                   asp-action="Logout">
                     Logout
                 </a>
 

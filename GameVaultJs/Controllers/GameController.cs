@@ -1,9 +1,11 @@
-﻿using GameVaultJs.Data;
+using GameVaultJs.Data;
 using GameVaultJs.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GameVaultJs.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class GameController : Controller
     {
         private readonly ApplicationDbContext _context;
