@@ -18,8 +18,9 @@ namespace GameVaultJs.Controllers
             return View();
         }
 
-        public JsonResult GameList(Game games)
+        public JsonResult GameList()
         {
+            var games = _context.Games.ToList();
             return new JsonResult(games);
         }
 
