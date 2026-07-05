@@ -50,20 +50,21 @@
 ### 📸 Application Interface Previews
 
 #### 1. Security Login & Registration Portal
-![Login Interface](https://github-production-user-asset-6210df.s3.amazonaws.com/placeholder-login.png)
-*Instruction: Upload a screenshot of the login form / portal here.*
+<img width="568" height="492" alt="image" src="https://github.com/user-attachments/assets/2722b2fd-1537-4c4e-bddc-ae6208db7ddb" />
+<img width="557" height="547" alt="image" src="https://github.com/user-attachments/assets/2ade7ddd-80dc-420d-a0a2-5080fe89a4a4" />
+
 
 #### 2. Game Inventory & Catalog Control (Admin Panel)
-![Game Inventory View](https://github-production-user-asset-6210df.s3.amazonaws.com/placeholder-games.png)
-*Instruction: Upload a screenshot of the Game management list dashboard with the dynamic modal popup active.*
+<img width="1906" height="848" alt="image" src="https://github.com/user-attachments/assets/e1e4d523-ea05-46cd-8bfa-c631b33b02f9" />
+
 
 #### 3. Curation of Gaming Genres with Document Action Center
-![Genre Curation Panel](https://github-production-user-asset-6210df.s3.amazonaws.com/placeholder-genres.png)
-*Instruction: Upload a screenshot of the Genre curation catalog page highlighting the Export PDF and Export Excel buttons.*
+<img width="1907" height="820" alt="image" src="https://github.com/user-attachments/assets/b99163a9-b455-4362-9e4d-cd1a7f09db02" />
+
 
 #### 4. Gamer News Portal Feed (User Hub)
-![News Feed View](https://github-production-user-asset-6210df.s3.amazonaws.com/placeholder-news.png)
-*Instruction: Upload a screenshot of the main News list showing published updates and article headers.*
+<img width="1605" height="786" alt="image" src="https://github.com/user-attachments/assets/780e1dd3-4fce-479f-8cbf-8d715a90aabe" />
+
 
 ---
 
